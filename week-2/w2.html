@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      border: 2px solid #555;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      width: 300px;
+      background-color: white;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Phones</h1>
+
+  <div class="container" id="container6">
+    <p id="phoneInfo">Click the button for details of a phone.</p>
+    <button onclick="showPhoneInfo()">Show Phone Info</button>
+  </div>
+
+  <script>
+    function showPhoneInfo() {
+      const phoneBrand = "Apple";
+      const phoneModel = "iPhone 15";
+      const phonePrice = "$999";
+      document.getElementById("phoneInfo").innerText = 
+        `Brand: ${phoneBrand}\nModel: ${phoneModel}\nPrice: ${phonePrice}`;
+    }
+  </script>
+
+</body>
+</html>
