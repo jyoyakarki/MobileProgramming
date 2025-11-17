@@ -3,54 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Container Actions - Jyoya Karki</title>
+  <title>Container Actions</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
+      background-color: #f9f9f9; /* lighter background */
       text-align: center;
       padding: 20px;
     }
     .container {
-      border: 2px solid #555;
+      border: 2px solid #aaa; /* lighter border */
       border-radius: 10px;
       padding: 20px;
       margin: 15px auto;
       width: 300px;
-      background-color: white;
+      background-color: #ffffff; /* white remains for clarity */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow */
     }
     button {
       margin-top: 10px;
       padding: 8px 15px;
       border: none;
       border-radius: 5px;
-      background-color: #007bff;
+      background-color: #80b3ff; /* lighter blue */
       color: white;
       cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #99ccff; /* soft hover color */
     }
   </style>
 </head>
 <body>
 
-  <h1>Jyoya Karki</h1>
+  <h1>Jyoya</h1>
 
   <div class="container" id="container6">
-    <p id="sumResult">Click the button to show the sum of Jyoya + Karki.</p>
+    <p id="sumResult">Click the button to show the sum of 5 + 6.</p>
     <button onclick="showSum()">Show Sum</button>
   </div>
 
-  <script>
-    function showSum() {
-      let jyoya = 5;
-      let karki = 6;
-      const sum = jyoya + karki;
-      const result = document.getElementById("sumResult");
-      result.textContent = `The sum of ${jyoya} + ${karki} is ${sum}.`;
-    }
-  </script>
+  <script src="jyoya.js"></script>
 
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Phone Brands</title>
+    <title>Smartphones - Jyoya Karki</title>
     <style>
         body {
-            background-color: aqua;
+            background-color: #e0f7fa; /* lighter aqua */
             margin: 0;
             padding: 20px;
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
             gap: 20px;
             justify-content: space-between;
         }
-        .brand {
+        .phone-group {
             padding: 15px;
             border-radius: 10px;
             width: 45%;
@@ -23,7 +23,7 @@
         .model {
             margin-top: 10px;
             border-radius: 10px;
-            padding: 50px;
+            padding: 30px;
             color: white;
         }
         img {
@@ -37,67 +37,64 @@
             display: none;
             margin-top: 10px;
             font-weight: bold;
-            color: darkblue;
+            color: #333366;
         }
         button {
             margin-top: 10px;
             padding: 8px 15px;
             border: none;
             border-radius: 5px;
-            background-color: navy;
+            background-color: #5d6dff; /* lighter blue */
             color: white;
             cursor: pointer;
             font-weight: bold;
         }
         button:hover {
-            background-color: darkred;
+            background-color: #ff7f7f; /* soft red */
         }
     </style>
 </head>
 <body>
 
+<h1 style="text-align:center;">Smartphones Collection by Jyoya Karki</h1>
+
     <div class="container">
 
-        <!-- APPLE -->
-        <div id="brand1" class="brand" style="background-color: #ff9999; border: 5px solid #ff0000;">
-            <h2>APPLE</h2>
-            <div class="model" style="background-color:#003399;">iPhone 15</div>
-            <div class="model" style="background-color:#ffffff; color:black;">iPhone 14</div>
-            <p class="hidden msg1">Jyoya loves Apple phones!</p>
-            <button onclick="changeDivColor('brand1')">Change My Color</button>
+        <div id="group1" class="phone-group" style="background-color: #ffd6d6; border: 5px solid #ff9999;">
+            <h2>Apple</h2>
+            <div class="model" style="background-color:#99ccff; color:black;">iPhone 15 Pro Max</div>
+            <div class="model" style="background-color:#ffffff; color:black;">iPhone 14 Pro</div>
+            <p class="hidden msg1">Apple phones are known for quality and speed.</p>
+            <button onclick="changeDivColor('group1')">Change My Color</button>
         </div>
 
-        <!-- SAMSUNG -->
-        <div id="brand2" class="brand" style="background-color: #99ccff; border: 5px double #0000ff;">
-            <h2>SAMSUNG</h2>
-            <div class="model" style="background-color:#da291c;">Galaxy S23</div>
-            <div class="model" style="background-color:#6cabdd;">Galaxy Note 20</div>
-            <p id="msg2" class="hidden">Jyoya loves Samsung phones!</p>
+        <div id="group2" class="phone-group" style="background-color: #cce6ff; border: 5px double #99ccff;">
+            <h2>Samsung</h2>
+            <div class="model" style="background-color:#ff9999;">Galaxy S24 Ultra</div>
+            <div class="model" style="background-color:#99d6ff; color:black;">Galaxy Z Fold 5</div>
+            <p id="msg2" class="hidden">Samsung is known for innovation and big screens.</p>
             <button onclick="showMessage('msg2')">Show Message</button>
         </div>
 
-        <!-- GOOGLE -->
-        <div id="brand3" class="brand" style="background-color: #99ff99; border: 4px solid green;">
-            <h2>GOOGLE</h2>
-            <div class="model" style="background-color:#0047ab;">Pixel 8</div>
-            <div class="model" style="background-color:#ff0000;">Pixel 7a</div>
-            <p id="msg3">Jyoya loves Google phones!</p>
+        <div id="group3" class="phone-group" style="background-color: #ccffcc; border: 4px solid #99ff99;">
+            <h2>Xiaomi</h2>
+            <div class="model" style="background-color:#99ccff;">Xiaomi 14 Pro</div>
+            <div class="model" style="background-color:#ff9999;">Redmi Note 13 Pro</div>
+            <p id="msg3">Xiaomi offers great value for money.</p>
             <button id="toggleBtn3" onclick="toggleMessage('msg3', 'toggleBtn3')">Hide Message</button>
         </div>
 
-        <!-- ONEPLUS -->
-        <div id="brand4" class="brand" style="background-color: #ffcc99; border: 5px solid orange;">
-            <h2>ONEPLUS</h2>
-            <div class="model" style="background-color:#003366;">OnePlus 12</div>
-            <div class="model" style="background-color:#ff6600;">OnePlus Nord</div>
-            <p id="msg4" class="hidden">Jyoya loves OnePlus phones!</p>
-            <img id="img4" src="C:\\Users\\nepal\\OneDrive\\Desktop\\New folder (2)\\download.jpg" alt="Phone Image">
+        <div id="group4" class="phone-group" style="background-color: #ffe6cc; border: 5px solid #ffcc99;">
+            <h2>OnePlus</h2>
+            <div class="model" style="background-color:#99b3ff;">OnePlus 12</div>
+            <div class="model" style="background-color:#ffcc99; color:black;">OnePlus Nord 3</div>
+            <p id="msg4" class="hidden">OnePlus is known for smooth performance.</p>
+            <img id="img4" src="C:\Users\nepal\OneDrive\Desktop\New folder (2)\download.jpg" alt="Phone Image">
             <button onclick="changeImage('img4')">Change Image</button>
         </div>
 
     </div>
 
-    <!-- Button for whole page background -->
     <div style="text-align:center; margin-top:30px;">
         <button onclick="changeBackground()">Change Page Background</button>
     </div>
@@ -106,7 +103,7 @@
         let toggleImage = false;
 
         function changeDivColor(id) {
-            const colors = ['#FFD700', '#FF69B4', '#00FA9A', '#1E90FF', '#FF4500'];
+            const colors = ['#ffe6b3', '#ffd6e6', '#ccffe6', '#cce6ff', '#ffcccc'];
             const random = colors[Math.floor(Math.random() * colors.length)];
             document.getElementById(id).style.backgroundColor = random;
         }
@@ -130,18 +127,19 @@
         function changeImage(id) {
             const img = document.getElementById(id);
             if (toggleImage) {
-                img.src = "C:\\Users\\nepal\\OneDrive\\Desktop\\New folder (2)\\download.jpg";
+                img.src = "pinterest.jpg";
             } else {
-                img.src = "C:\\Users\\nepal\\OneDrive\\Desktop\\New folder (2)\\wp2372393.jpg";
+                img.src = "pinterest.jpg";
             }
             toggleImage = !toggleImage;
         }
 
         function changeBackground() {
-            const colors = ['#fffacd', '#d1f7ff', '#f0fff0', '#f5f5dc', '#ffefd5'];
+            const colors = ['#fffacd', '#e6f7ff', '#f0fff0', '#f5f5dc', '#fff0e6'];
             document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
         }
     </script>
 
 </body>
 </html>
+

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jyoya’s Math Actions</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jyoya.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -35,7 +36,7 @@
 </head>
 <body>
 
-  <h2>Jyoya Karki's Math Buttons</h2>
+  <h2>Jyoya's Math Buttons</h2>
 
   <button id="addBtn">Jyoya Addition</button>
   <div id="addOutput" class="output"></div>
@@ -51,35 +52,6 @@
 
   <button id="msgBtn">Jyoya Message</button>
   <div id="msgOutput" class="output"></div>
-
-  <script>
-    $(document).ready(function(){
-
-      const a = 12;
-      const b = 4;
-
-      $("#addBtn").click(function(){
-        $("#addOutput").text(`The sum of ${a} + ${b} is ${a + b}.`).fadeIn();
-      });
-
-      $("#subBtn").click(function(){
-        $("#subOutput").text(`The difference of ${a} - ${b} is ${a - b}.`).fadeIn();
-      });
-
-      $("#mulBtn").click(function(){
-        $("#mulOutput").text(`The product of ${a} × ${b} is ${a * b}.`).fadeIn();
-      });
-
-      $("#divBtn").click(function(){
-        $("#divOutput").text(`The division of ${a} ÷ ${b} is ${a / b}.`).fadeIn();
-      });
-
-      $("#msgBtn").click(function(){
-        $("#msgOutput").text("Jyoya is learning JavaScript!").fadeIn();
-      });
-
-    });
-  </script>
 
 </body>
 </html>
